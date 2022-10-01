@@ -1,0 +1,89 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: linear-gradient(#01012e , #320224);
+    height: 100vh;
+    font-family: system-ui;
+   
+}
+
+seaction{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center
+}
+
+ul{
+    text-align: center;
+
+}
+ul:hover li a{
+    opacity: 0;
+
+
+}
+ul li {
+    list-style: none;
+    margin:40px 0 ;
+
+}
+ul li a {
+    color:#fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    background:darkblue;
+    padding:6px 15px;
+    border-radius: 20px;
+    display:inline-block;
+    transition: 0.5s;
+    position: relative;
+    z-index: 10;
+
+}
+ul li a:hover{
+    transform: scale(1.5);
+    background: darkmagenta;
+    opacity: 1;
+
+}
+ul li ::after{
+    content:attr(data-text);
+    color: #fff;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    font-size:80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 50px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+ul li :hover :after{
+    letter-spacing: 5px;
+}
+ul li::before{
+    content: '';
+    width:180px;
+    height: 80px;
+    background:#fff;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,80%);
+    border-radius: 50%;
+    box-shadow:  0 0 80px orangered;
+    opacity: 0;
+    transition: 0.5s;
+}
+ul li:hover::before{
+    opacity: o.5;
+    width: 80px;
+
+}
